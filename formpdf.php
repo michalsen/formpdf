@@ -36,6 +36,9 @@ add_filter('template_redirect', 'formpdf_override' );
 // Going to see if the content is Advanced Content Type, and if so, appropriate
 // type with pdf.
 // If PDF, then we will store that PDF url within the form that will be shown.
+//
+// !! Caution, hardcoded goodness here in terms of field name !!
+//
 function formpdf_override() {
   global $wp_query;
   echo  the_field('rm_file');

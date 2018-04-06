@@ -32,16 +32,13 @@ if(admin){
 
 add_filter('template_redirect', 'formpdf_override' );
 
+
+// Going to see if the content is Advanced Content Type, and if so, appropriate
+// type with pdf.
+// If PDF, then we will store that PDF url within the form that will be shown.
 function formpdf_override() {
   global $wp_query;
-
   echo  the_field('rm_file');
 }
 
 
-add_action('formpdf', 'formPDF_trial1', 407);
-
-function formPDF_trial1() {
-    //echo  'trial: ' . the_field('rm_file');
-    return;
-}

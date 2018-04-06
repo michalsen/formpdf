@@ -9,6 +9,9 @@ tedious. That being said, hopefully this will work.
 It goes without saying, if this is the only info on this plugin you see, it
 would be a safe bet it was a failure.
 
+
+if you have any questions, find me on twitter @michalsen
+
 ...
 
 But enough banter. Let's do that wordpress thing.

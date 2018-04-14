@@ -25,23 +25,28 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit; // Exit if accessed directly
 }
 
-
+// Not needed
 if(admin){
-  include_once( 'includes/admin/class_formpdf_admin.php' );
+  // include_once( 'includes/admin/class_formpdf_admin.php' );
 }
 
-add_filter('template_redirect', 'formpdf_override' );
+
+
 
 
 // Going to see if the content is Advanced Content Type, and if so, appropriate
 // type with pdf.
 // If PDF, then we will store that PDF url within the form that will be shown.
 //
-// !! Caution, hardcoded goodness here in terms of field name !!
+// !! Caution, hardcoded goodness here in terms of field name
 //
-function formpdf_override() {
+function formpdf_fid() {
   global $wp_query;
-  echo  the_field('rm_file');
+  return get_field('rm_file');
 }
+
+add_shortcode('fid', 'formpdf_fid');
+
+
 
 
